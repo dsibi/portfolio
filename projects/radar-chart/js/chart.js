@@ -80,7 +80,7 @@ const createSVG = (dataset) => {
         const rank = program_type == 'fs' ?
             d3.select("#j" + element + " .rank")
                 // .text('КП ' + dataset[index].value[0].tss_sp + ' + ПП ' +
-                    .text(dataset[index].value[0].final_rank + ' plsce: SP ' + dataset[index].value[0].tss_sp + ' + FS ' +
+                    .text(dataset[index].value[0].final_rank + ' place: SP ' + dataset[index].value[0].tss_sp + ' + FS ' +
                     dataset[index].value[0].total_segment_score + ' = ' + tss) :
             d3.select("#j" + element + " .rank")
                 .text(dataset[index].value[0].rank);
