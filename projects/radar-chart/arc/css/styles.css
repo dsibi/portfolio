@@ -1,0 +1,36 @@
+.title {
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'tnum' 1;
+}
+
+.line {
+    fill: none;
+    stroke: cornflowerblue;
+    stroke-width: 2;
+    fill: cornflowerblue;
+    fill-opacity: 0.1;
+    transition: all 0.3s ease-out;
+}
+
+.grid-line {
+    fill: none;
+    stroke: lightgray;
+}
+
+.grid-text {
+    fill: gray;
+    font-size: 0.8em;
+}
+
+.metric-label {
+    fill: gray;
+    text-anchor: middle;
+    font-size: 0.8em;
+    letter-spacing: 0.005em;
+}

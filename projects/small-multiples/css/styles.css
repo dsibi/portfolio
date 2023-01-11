@@ -1,0 +1,137 @@
+.capitalize {
+  text-transform: capitalize;
+}
+
+.has-dropcap:first-letter {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 3rem;
+  line-height: .8;
+  margin: 0.1em 0.1em 0.2em 0;
+}
+
+#wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+#chart {
+  margin-top: 4em;
+}
+
+svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.freezing {
+  fill: #e0f3f3;
+}
+
+.y-axis-label {
+  fill: black;
+  font-size: 1.4em;
+  text-anchor: middle;
+  transform: rotate(-90deg);
+}
+
+.x-axis-label {
+  fill: black;
+  font-size: 1.4em;
+  text-anchor: middle;
+}
+
+.voronoi {
+  fill: transparent;
+}
+
+.listening-rect {
+  fill: transparent;
+}
+
+.tooltip {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 1.4em;
+  font-size: .9em;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.test {
+  stroke-width: 5px;
+}
+
+.tooltip-upper_line {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.legend-title,
+.legend-byline {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.legend-title {
+  fill: rgb(42, 42, 42);
+  text-anchor: middle;
+  font-weight: 700;
+  font-size: 0.95em;
+  letter-spacing: 0.01em;
+}
+
+.legend-byline {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  fill: rgb(42, 42, 42);
+  opacity: 0.6;
+  text-anchor: middle;
+  font-size: 0.8em;
+}
+
+.legend-value {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  fill: rgb(42, 42, 42);
+  dominant-baseline: middle;
+  font-size: 0.7rem;
+}
+
+.labels,
+.labels_points {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  text-anchor: middle;
+  font-size: 0.7rem;
+  line-height: .8;
+  fill: rgb(42, 42, 42);
+  font-weight: 700;
+  /* margin: 0.1em 0.1em 0.2em 0; */
+}
+
+.labels_points {
+  font-weight: 600;
+}
+
+.xAxisLabel {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  fill: rgb(42, 42, 42);
+}
+
+.tick{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  fill: rgb(42, 42, 42);
+}
+
+.name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  fill: rgb(42, 42, 42);
+  font-weight: 700;
+}

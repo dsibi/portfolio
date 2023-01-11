@@ -1,0 +1,6 @@
+﻿item;stage1;stage2;stage1_name;stage2_name
+item1;18;18;stage1_name1;stage1_name2
+item2;12;16;stage1_name4;stage1_name2
+item3;10;10;stage1_name1;stage1_name3
+item4;18;;stage1_name4;
+item5;16;;stage1_name1;

@@ -1,0 +1,62 @@
+.bcgTest {
+    background-color: blanchedalmond;
+}
+
+.listening-rect {
+    fill: transparent;
+}
+
+.line {
+    fill: none;
+    stroke: #235784;
+    stroke-width: 2;
+}
+
+.minister-name {
+    transform: rotate(-90deg);
+    font-family: sans-serif;
+    text-anchor: end;
+    font-size: .8em;
+}
+
+.median {
+    stroke: #71BFD3;
+    stroke-dasharray: 2px 4px;
+}
+
+.bg {
+    stroke-width: 5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke: rgb(255, 255, 255)
+}
+
+#ul_bg,
+#ul_fg {
+    font-weight: 600;
+}
+
+#ul_bg,
+#ul_fg,
+#ll_bg,
+#ll_fg {
+    font-size: .8em;
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    text-anchor: middle;
+    z-index: -10;
+}
+
+.textFg .qqq {
+    color: aqua;
+}

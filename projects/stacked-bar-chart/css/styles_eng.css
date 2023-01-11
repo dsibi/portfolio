@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.has-dropcap:first-letter {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 4.5rem;
+  line-height: .8;
+  margin: 0.1em 0.1em 0.2em 0;
+}
+
+#wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+#chart {
+  margin-top: 4em;
+}
+
+svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bin rect {
+  fill: #71BFD3;
+}
+
+/* CSS hover states are good to use for stylistic updates that do not require DOM changes */
+.bin rect:hover {
+  fill: #235784;
+}
+
+.bin text {
+  text-anchor: middle;
+  fill: darkgrey;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.mean {
+  stroke: maroon;
+  stroke-dasharray: 2px 4px;
+}
+
+.y-axis text {
+  fill: rgb(0, 0, 0);
+  font-size: 1.4em;
+  text-anchor: end;
+}
+
+.y-axis path {
+  display: none;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.2s ease-out;
+  /* Prevent tooltip from receiving the mouse events we will be implementing */
+  pointer-events: none;
+}
+
+/* Adds an arrow pointing down at the hovered bar */
+.tooltip:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+#upper_line {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+.points, .sp_fs {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 0.7rem;
+  line-height: .8;
+  fill: rgb(255, 255, 255);
+  font-weight: 600;
+  /* margin: 0.1em 0.1em 0.2em 0; */
+}
+
+.stage_name {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 0.7rem;
+  line-height: .8;
+  /* fill: rgb(255, 255, 255); */
+  font-weight: 600;
+  /* margin: 0.1em 0.1em 0.2em 0; */
+}
+
+.total_score {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 0.7rem;
+  line-height: .8;
+  fill: rgb(0, 0, 0);
+  font-weight: 600;
+  /* margin: 0.1em 0.1em 0.2em 0; */
+}
+
+.tick tspan{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+#explainer {
+  display: block;
+  margin-left: 19%;
+  margin-right: auto;
+  width: 63%;
+}

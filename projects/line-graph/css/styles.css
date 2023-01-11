@@ -1,0 +1,101 @@
+#wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+#chart {
+  margin-top: 4em;
+}
+
+svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.freezing {
+  fill: #e0f3f3;
+}
+
+.line {
+  fill: none;
+  stroke: #235784;
+  stroke-width: 2;
+}
+
+.median {
+  stroke: #71BFD3;
+  stroke-dasharray: 2px 4px;
+}
+
+.y-axis-label {
+  fill: black;
+  font-size: 1.4em;
+  text-anchor: middle;
+  transform: rotate(-90deg);
+}
+
+.x-axis-label {
+  fill: black;
+  font-size: 1.4em;
+  text-anchor: middle;
+}
+
+.minister-name{
+  transform: rotate(-90deg);
+  font-family: sans-serif;
+  text-anchor:end;
+  font-size: .8em;
+}
+
+.listening-rect {
+  fill: transparent;  /* Default fill color is black */
+}
+
+.tooltip {
+  /* opacity: 0; */
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: #fff;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: .9em;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.test {
+  stroke-width: 5px;
+}
+
+/* .tooltip:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+} */
+
+.tooltip-upper_line {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+/* p::selection {
+  color: #fff;
+  background-color: #000; 
+} */

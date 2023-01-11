@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* .container {
+    margin-top: 25px;
+    margin-left: 15px;
+} */
+
+.row {
+    margin-top: 20px;
+}
+
+.col {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip {
+    position: fixed;
+    transition: all;
+    background-color: coral;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+/* .chart svg
+{
+    border: 1px solid #000;
+} */
+
+/* .levels path {
+    fill: aqua;
+    stroke: lightgray;
+} */
+
+/* path {
+    fill: url(#svgGradient)
+} */
+
+.grid-lines path {
+    stroke: coral;
+}
+
+.tick-lines path {
+    stroke: rgb(228, 16, 16);
+    stroke-width: 2px;
+}
+
+.indic {
+    fill: cornflowerblue;
+}
+
+.shape path {
+    stroke: cornflowerblue;
+    stroke-width: 2;
+    fill: cornflowerblue;
+}
+
+.chart circle {
+    cursor: pointer;
+}
+
+text {
+    fill: rgb(64, 64, 64);
+    text-anchor: middle;
+    font-size: .63em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#money text {
+    fill: #FF0054;
+}
+
+#cosmetics text {
+    fill: #390099;
+}
+
+#jewelry text {
+    fill: #FFBD00;
+}
+
+#trips text {
+    fill: #ff5400;
+}
+
+#clothes text {
+    fill: #9E0059;
+}
+
+.scores {
+    font-size: .7em;
+}
+
+.rank,
+.skater_name {
+    color: rgb(30, 30, 30);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.score {
+    color: rgb(30, 30, 30);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+#svg {
+    display: block;
+    margin: auto;
+}
+
+#background {
+    mask: url(#mask);
+}
+
+#balls{
+    transform: translate(0px, -13px);
+}
+
+.listening-path {
+    fill: transparent;
+}
+
+.ball {
+    fill: #FBFFFF;
+    stroke: #666666;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.ball_logo {
+    fill: #ff5400;
+    text-anchor:start;
+    font-size: .5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
