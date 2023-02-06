@@ -61,7 +61,7 @@ async function drawPie() {
         .append("title")
         .text(d => d.data.goods)
 
-    const iconGroups = centeredGroup.selectAll("g")
+    const iconGroups = centeredGroup.selectAll("---")
         .data(arcs)
         .enter().append("g")
         .attr("transform", d => `translate(${arc.centroid(d)})`)
