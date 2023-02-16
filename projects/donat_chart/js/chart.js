@@ -104,7 +104,7 @@ async function drawPie() {
 
     iconGroups.append("text")
         .attr("class", "label")
-        .text(d => d.data.quant)
+        .text(d => `${d.data.quant}%`)
         .attr("transform", d => `translate(0, 20)`)
 
 }
