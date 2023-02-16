@@ -13,21 +13,10 @@ svg {
   display: block;
 }
 
-.freezing {
-  fill: #e0f3f3;
-}
-
 .line {
   fill: none;
   stroke: #eb4511;
   stroke-width: 3;
-}
-
-.tooltipCircle {
-  stroke: #eb4511;
-  fill: white;
-  stroke-width: 2;
-  opacity: 0;
 }
 
 .mean,
@@ -50,13 +39,6 @@ svg {
   text-anchor: middle;
 }
 
-.minister-name {
-  transform: rotate(-90deg);
-  font-family: sans-serif;
-  text-anchor: end;
-  font-size: .8em;
-}
-
 .listening-rect {
   fill: transparent;
   /* Default fill color is black */
@@ -71,14 +53,10 @@ svg {
   background: #fff;
   text-align: center;
   line-height: 1.4em;
-  c border: 1px solid #ddd;
+  border: 1px solid #ddd;
   z-index: 10;
   transition: all 0.1s ease-out;
   pointer-events: none;
-}
-
-.test {
-  stroke-width: 5px;
 }
 
 /* .tooltip:before {

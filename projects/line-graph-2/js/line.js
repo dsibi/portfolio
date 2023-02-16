@@ -1,8 +1,8 @@
 async function drawLineChart() {
 
   // 1. Access data
-  const pathToJSON = './data/time_entries.csv'
-  let rawDataset = await d3.dsv(";", pathToJSON);
+  const pathToCsv = './data/time_entries.csv'
+  let rawDataset = await d3.dsv(";", pathToCsv);
   // console.log(rawDataset);
 
   //создаем структуру данных
@@ -123,18 +123,6 @@ async function drawLineChart() {
     .attr('y1', yScale(meanHours))
     .attr('y2', yScale(meanHours));
 
-  //areas
-  bounds.selectAll('.ministers')
-    .data(vacation)
-    .enter().append('rect')
-    .attr('x', d => xScale(d.start))
-    .attr('width', d => xScale(d.end) - xScale(d.start))
-    .attr('y', 0)
-    .attr('height', dimensions.boundedHeight)
-    .attr("class", d => `minister ${d.name}`)
-    .style("fill", '#D4E1ED')
-    .style("opacity", .3);
-
   bounds.append('line').attr('class', 'vacation_start');
   bounds.append('line').attr('class', 'vacation_end');
 
@@ -219,53 +207,53 @@ async function drawLineChart() {
     .text(`Mean Daily Hours:${d3.format(".1f")(meanHours)}`);
 
   // 7. Set Up Interactions
-  // const listeningRect = bounds.append("rect")
-  //   .attr("class", "listening-rect")
-  //   .attr("width", dimensions.boundedWidth)
-  //   .attr("height", dimensions.boundedHeight)
-  //   .on("mousemove", onMouseMove)
-  //   .on("mouseleave", onMouseLeave);
+  const listeningRect = bounds.append("rect")
+    .attr("class", "listening-rect")
+    .attr("width", dimensions.boundedWidth)
+    .attr("height", dimensions.boundedHeight)
+    .on("mousemove", onMouseMove)
+    .on("mouseleave", onMouseLeave);
 
-  // const tooltip = d3.select('#tooltip');
-  // function onMouseMove(e, d) {
-  //   const mousePos = d3.pointer(e)
-  //   const hoveredDate = xScale.invert(mousePos[0])
-  //   const formatDate = d3.timeFormat("%d.%m.%Y")
-  //   const getDistanceFromHoveredDate = d => Math.abs(
-  //     xAccessor(d) - hoveredDate)
-  //   const closestIndex = d3.leastIndex(datasetWeeks, (a, b) => (
-  //     getDistanceFromHoveredDate(a) - getDistanceFromHoveredDate(b)
-  //   ))
-  //   const closestDataPoint = datasetWeeks[closestIndex]
-  //   const closestXValue = xAccessor(closestDataPoint)
-  //   const closestYValue = yAccessorLine(closestDataPoint)
-  //   tooltip.select("#upper_line")
-  //     .text(formatDate(closestXValue))
-  //   const formatHours = d => `Avg Week Hours: ${d3.format(".1f")(d)}`
-  //   tooltip.select("#lower_line")
-  //     .html(formatHours(closestYValue))
+  const tooltip = d3.select('#tooltip');
+  function onMouseMove(e, d) {
+    const mousePos = d3.pointer(e)
+    const hoveredDate = xScale.invert(mousePos[0])
+    const formatDate = d3.timeFormat("%d.%m.%Y")
+    const getDistanceFromHoveredDate = d => Math.abs(
+      xAccessor(d) - hoveredDate)
+    const closestIndex = d3.leastIndex(datasetWeeks, (a, b) => (
+      getDistanceFromHoveredDate(a) - getDistanceFromHoveredDate(b)
+    ))
+    const closestDataPoint = datasetWeeks[closestIndex]
+    const closestXValue = xAccessor(closestDataPoint)
+    const closestYValue = yAccessorLine(closestDataPoint)
+    tooltip.select("#upper_line")
+      .text(formatDate(closestXValue))
+    const formatHours = d => `Avg Week Hours: ${d3.format(".1f")(d)}`
+    tooltip.select("#lower_line")
+      .html(formatHours(closestYValue))
 
-  //   const x = xScale(closestXValue)
-  //     + dimensions.margin.left * .7
-  //   const y = yScale(closestYValue)
-  //     + dimensions.margin.top
-  //   tooltip.style("transform", `translate(`
-  //     + `calc( -36% + ${x + window.innerWidth * .1}px),`
-  //     + `calc(-100% + ${y}px)`
-  //     + `)`)
-  //   tooltipCircle
-  //     .attr("cx", xScale(closestXValue))
-  //     .attr("cy", yScale(closestYValue))
-  //     .style("opacity", 1)
-  //   tooltip.style('opacity', 1);
-  // };
-  // function onMouseLeave() {
-  //   tooltip.style("opacity", 0)
-  //   tooltipCircle.style("opacity", 0)
-  // };
-  // const tooltipCircle = bounds.append("circle")
-  //   .attr('class', 'tooltipCircle')
-  //   .attr("r", 4);
+    const x = xScale(closestXValue)
+      + dimensions.margin.left * .7
+    const y = yScale(closestYValue)
+      + dimensions.margin.top
+    tooltip.style("transform", `translate(`
+      + `calc( -36% + ${x + window.innerWidth * .1}px),`
+      + `calc(-100% + ${y}px)`
+      + `)`)
+    tooltipCircle
+      .attr("cx", xScale(closestXValue))
+      .attr("cy", yScale(closestYValue))
+      .style("opacity", 1)
+    tooltip.style('opacity', 1);
+  };
+  function onMouseLeave() {
+    tooltip.style("opacity", 0)
+    tooltipCircle.style("opacity", 0)
+  };
+  const tooltipCircle = bounds.append("circle")
+    .attr('class', 'tooltipCircle')
+    .attr("r", 4);
 }
 drawLineChart()
 
