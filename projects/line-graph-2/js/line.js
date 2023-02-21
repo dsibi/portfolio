@@ -235,7 +235,7 @@ async function drawLineChart() {
     const closestYValue = yAccessorLine(closestDataPoint)
     tooltip.select("#upper_line")
       .text(formatDate(closestXValue))
-    const formatHours = d => `Avg Week Hours: ${d3.format(".1f")(d)}`
+    const formatHours = d => `Avg Week Daily Hours: ${d3.format(".1f")(d)}`
     tooltip.select("#lower_line")
       .html(formatHours(closestYValue))
 
