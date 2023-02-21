@@ -19,6 +19,13 @@ svg {
   stroke-width: 3;
 }
 
+.tooltipCircle {
+  stroke: #eb4511;
+  fill: white;
+  stroke-width: 2;
+  opacity: 0;
+}
+
 .mean,
 .vacation_start,
 .vacation_end {

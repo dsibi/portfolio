@@ -27,7 +27,7 @@ async function drawLineChart() {
     dataset.push(currRecord);
   }
 
-  // //конвертация в фомат даты
+  // //конвертация в фомат даты - с учтетом формата отображения времени (см. https://stackoverflow.com/questions/75470969/d3-js-project-problem-with-rendering/75509284#75509284)
   // //js подход
   // const [day, month, year] = dataset[0].date.split('.');
   // let results = new Date(+year, +month - 1, +day)
@@ -40,11 +40,17 @@ async function drawLineChart() {
   // const parseTime = d3.timeParse("%d.%m.%Y");
   // let resultsD3 = parseTime(dataset[0].date);
 
-  dataset.forEach(function (element) {
-    let timeString = element.duration.toLocaleTimeString();
-    let timeEl = timeString.split(':');
-    element.durationSeconds = (+timeEl[0]) * 60 * 60 + (+timeEl[1]) * 60 + (+timeEl[2]);
-  });
+  //не работает при формате времени AM/PM
+  // dataset.forEach(function (element) {
+  //   let timeString = element.duration.toLocaleTimeString();
+  //   let timeEl = timeString.split(':');
+  //   element.durationSeconds = (+timeEl[0]) * 60 * 60 + (+timeEl[1]) * 60 + (+timeEl[2]);
+  // });
+
+  dataset.forEach(function(element) {
+    let secondsDiff = new Date(element.duration).valueOf() - new Date(element.date).valueOf();
+    element.durationSeconds = secondsDiff/1000;
+});
 
   var groupedDataset = [];
   dataset.reduce(function (res, value) {
