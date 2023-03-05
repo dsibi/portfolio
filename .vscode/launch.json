@@ -11,9 +11,9 @@
             // "url": "http://127.0.0.1:5500/projects/box-plot/box-plot.html",
             // "url": "http://127.0.0.1:5500/projects/small-multiples/small-multiples.html",
             // "url": "http://127.0.0.1:5500/projects/stacked-bar-chart/stacked-bar-chart.html",
-            // "url": "http://127.0.0.1:5500/projects/radar-chart/radar-chart.html",
+            "url": "http://127.0.0.1:5500/projects/radar-chart/radar-chart.html",
             // "url": "http://127.0.0.1:5500/projects/heatmap/heatmap.html",
-            "url": "http://127.0.0.1:5500/projects/line-graph-2/line-graph-2.html",
+            // "url": "http://127.0.0.1:5500/projects/line-graph-2/line-graph-2.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

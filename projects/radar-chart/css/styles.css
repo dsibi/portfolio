@@ -1,3 +1,23 @@
+/* .shape path {
+    stroke: rgb(237, 100, 143);
+    stroke-width: 2;
+    fill: rgb(237, 100, 143);
+}
+
+.indic {
+    fill: rgb(237, 100, 143);
+} */
+
+.indic {
+    fill: cornflowerblue;
+}
+
+.shape path {
+    stroke: cornflowerblue;
+    stroke-width: 2;
+    fill: cornflowerblue;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -50,16 +70,6 @@ path{
 .tick-lines path {
     stroke: rgb(228, 16, 16);
     stroke-width: 2px;
-}
-
-.indic {
-    fill: cornflowerblue;
-}
-
-.shape path {
-    stroke: cornflowerblue;
-    stroke-width: 2;
-    fill: cornflowerblue;
 }
 
 .chart circle {
